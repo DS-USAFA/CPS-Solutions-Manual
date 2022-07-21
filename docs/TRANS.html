@@ -4,19 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 16 Transformations | Solutions for Probability and Statistics - MASTER version</title>
+<title>Chapter 16 Transformations | Solutions Manual for ‘Computational Probability and Statistics’</title>
 <meta name="author" content="Matthew Davis">
 <meta name="author" content="Brianna Hitt">
 <meta name="author" content="Kenneth Horton">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="16.1 Objectives Given a discrete random variable, determine the distribution of a transformation of that random variable. Given a continuous random variable, use the cdf method to determine the...">
 <meta name="generator" content="bookdown 0.27 with bs4_book()">
-<meta property="og:title" content="Chapter 16 Transformations | Solutions for Probability and Statistics - MASTER version">
+<meta property="og:title" content="Chapter 16 Transformations | Solutions Manual for ‘Computational Probability and Statistics’">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/CoverSol2.png">
 <meta property="og:description" content="16.1 Objectives Given a discrete random variable, determine the distribution of a transformation of that random variable. Given a continuous random variable, use the cdf method to determine the...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 16 Transformations | Solutions for Probability and Statistics - MASTER version">
+<meta name="twitter:title" content="Chapter 16 Transformations | Solutions Manual for ‘Computational Probability and Statistics’">
 <meta name="twitter:description" content="16.1 Objectives Given a discrete random variable, determine the distribution of a transformation of that random variable. Given a continuous random variable, use the cdf method to determine the...">
 <meta name="twitter:image" content="/figures/CoverSol2.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -58,7 +58,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Solutions for Probability and Statistics - MASTER version</a>
+        <a href="index.html" title="">Solutions Manual for ‘Computational Probability and Statistics’</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -143,7 +143,7 @@
 <div class="sourceCode" id="cb312"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sims</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/Exponential.html">rexp</a></span><span class="op">(</span><span class="fl">10000</span>,<span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="fu">mean</span><span class="op">(</span><span class="va">sims</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 7.923259</code></pre>
+<pre><code>## [1] 7.782596</code></pre>
 <p>So, <span class="math inline">\(g(\mbox{E}(X))=4\)</span> and <span class="math inline">\(\mbox{E}(g(X))\approx 7.84\)</span>.</p>
 </div>
 <div id="problem-2-15" class="section level3" number="16.2.2">
@@ -257,7 +257,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 </ol>
 <div class="sourceCode" id="cb329"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 19.03599 12.42314 15.35556</code></pre>
+<pre><code>## [1] 20.04401 10.94930 15.29389</code></pre>
 <div class="sourceCode" id="cb331"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1144</span><span class="op">)</span></span>
 <span><span class="va">sim_exercise</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>T1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span>,T2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -326,7 +326,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions for Probability and Statistics - MASTER version</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-07-19.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-07-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
