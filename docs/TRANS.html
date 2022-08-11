@@ -71,6 +71,7 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="objectives.html">Objectives</a></li>
 <li class="book-part">Descriptive Statistical Modeling</li>
 <li><a class="" href="CS1.html"><span class="header-section-number">1</span> Case Study</a></li>
 <li><a class="" href="DB.html"><span class="header-section-number">2</span> Data Basics</a></li>
@@ -119,9 +120,9 @@
 <h1>
 <span class="header-section-number">16</span> Transformations<a class="anchor" aria-label="anchor" href="#TRANS"><i class="fas fa-link"></i></a>
 </h1>
-<div id="objectives-15" class="section level2" number="16.1">
+<div id="objectives-16" class="section level2" number="16.1">
 <h2>
-<span class="header-section-number">16.1</span> Objectives<a class="anchor" aria-label="anchor" href="#objectives-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">16.1</span> Objectives<a class="anchor" aria-label="anchor" href="#objectives-16"><i class="fas fa-link"></i></a>
 </h2>
 <ol style="list-style-type: decimal">
 <li><p>Given a discrete random variable, determine the distribution of a transformation of that random variable.</p></li>
@@ -140,10 +141,10 @@
 <p>Let <span class="math inline">\(X\)</span> be a random variable and let <span class="math inline">\(g\)</span> be a function. By this point, it should be clear that <span class="math inline">\(\mbox{E}[g(X)]\)</span> is not necessarily equal to <span class="math inline">\(g(\mbox{E}[X])\)</span>.</p>
 <p>Let <span class="math inline">\(X\sim \textsf{Expon}(\lambda=0.5)\)</span> and <span class="math inline">\(g(X)=X^2\)</span>. We know that <span class="math inline">\(\mbox{E}(X)=\frac{1}{0.5}=2\)</span> so <span class="math inline">\(g(\mbox{E}(X))=\mbox{E}(X)^2=4\)</span>. Use <code>R</code> to find <span class="math inline">\(\mbox{E}[g(X)]\)</span>. Make use of the fact that <code>R</code> has <code><a href="https://rdrr.io/r/stats/Exponential.html">rexp()</a></code> built into it, so you don’t have to create your own random variable generator.</p>
 <p>Let <span class="math inline">\(Y=X^2\)</span>.</p>
-<div class="sourceCode" id="cb312"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb315"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sims</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/Exponential.html">rexp</a></span><span class="op">(</span><span class="fl">10000</span>,<span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="fu">mean</span><span class="op">(</span><span class="va">sims</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 7.782596</code></pre>
+<pre><code>## [1] 8.481114</code></pre>
 <p>So, <span class="math inline">\(g(\mbox{E}(X))=4\)</span> and <span class="math inline">\(\mbox{E}(g(X))\approx 7.84\)</span>.</p>
 </div>
 <div id="problem-2-15" class="section level3" number="16.2.2">
@@ -157,9 +158,9 @@ f_Y(y)=\mbox{P}(Y=y)=\mbox{P}(X+3=y)=\mbox{P}(X=y-3)=f_X(y-3)=\binom{n}{y-3}\pi^
 \]</span></p>
 <p>where <span class="math inline">\(3\leq Y \leq n+3\)</span>.</p>
 </div>
-<div id="problem-3-12" class="section level3" number="16.2.3">
+<div id="problem-3-11" class="section level3" number="16.2.3">
 <h3>
-<span class="header-section-number">16.2.3</span> Problem 3<a class="anchor" aria-label="anchor" href="#problem-3-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">16.2.3</span> Problem 3<a class="anchor" aria-label="anchor" href="#problem-3-11"><i class="fas fa-link"></i></a>
 </h3>
 <p>Let <span class="math inline">\(X\sim \textsf{Expon}(\lambda)\)</span>. Let <span class="math inline">\(Y=X^2\)</span>. Find the pdf of <span class="math inline">\(Y\)</span>.</p>
 <p>CDF method:
@@ -206,7 +207,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <ol style="list-style-type: lower-alpha">
 <li>Use the <code><a href="https://rdrr.io/r/stats/integrate.html">integrate()</a></code> function to confirm this is a valid pdf.</li>
 </ol>
-<div class="sourceCode" id="cb314"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb317"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/integrate.html">integrate</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">-</span><span class="va">x</span><span class="op">/</span><span class="fl">200</span><span class="op">+</span><span class="fl">3</span><span class="op">/</span><span class="fl">20</span>,<span class="fl">10</span>,<span class="fl">30</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 1 with absolute error &lt; 1.1e-14</code></pre>
 <ol start="2" style="list-style-type: lower-alpha">
@@ -219,12 +220,12 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <li>To use the cdf to simulate random variables from this distribution, we need the inverse of the cdf which means we have to solve a quadratic equation. We can do this mathematically or just use the function <code><a href="https://rdrr.io/r/stats/uniroot.html">uniroot()</a></code>. So first, we will make sure we understand how to use <code><a href="https://rdrr.io/r/stats/uniroot.html">uniroot()</a></code>.</li>
 </ol>
 <p>As a check, we know the median of the distribution is approximately 15.857. Here is code to show that 15.857 is approximately the median. We are integrating the pdf from 10 to 15.857 to confirm that this is 0.5.</p>
-<div class="sourceCode" id="cb316"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb319"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/integrate.html">integrate</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">-</span><span class="va">x</span><span class="op">/</span><span class="fl">200</span><span class="op">+</span><span class="fl">3</span><span class="op">/</span><span class="fl">20</span>,<span class="fl">10</span>,<span class="fl">15.857</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 0.4999389 with absolute error &lt; 5.6e-15</code></pre>
 <p>Use <code><a href="https://rdrr.io/r/stats/uniroot.html">uniroot()</a></code> and your cdf to confirm that 15.857 is the median.</p>
 <p>Solution.</p>
-<div class="sourceCode" id="cb318"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb321"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/uniroot.html">uniroot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">-</span><span class="va">x</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="fl">400</span><span class="op">+</span><span class="fl">3</span><span class="op">*</span><span class="va">x</span><span class="op">/</span><span class="fl">20</span><span class="op">-</span><span class="fl">5</span><span class="op">/</span><span class="fl">4</span><span class="op">-</span><span class="fl">.5</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">30</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">root</span></span></code></pre></div>
 <pre><code>## [1] 15.85786</code></pre>
 <ol start="4" style="list-style-type: lower-alpha">
@@ -234,37 +235,37 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
   uniroot(function(x)"YOUR CDF HERE as a function of x"-y,c(10,30))$root
 }</code></pre>
 <p>We made it a function of <span class="math inline">\(y\)</span> since we are using <span class="math inline">\(x\)</span> in our cdf. There are two function calls here, can you see why?</p>
-<div class="sourceCode" id="cb321"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb324"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="cn">T</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/uniroot.html">uniroot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">-</span><span class="va">x</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="fl">400</span><span class="op">+</span><span class="fl">3</span><span class="op">*</span><span class="va">x</span><span class="op">/</span><span class="fl">20</span><span class="op">-</span><span class="fl">5</span><span class="op">/</span><span class="fl">4</span><span class="op">-</span><span class="va">y</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">30</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">root</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="sourceCode" id="cb322"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb325"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fl">.5</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 15.85786</code></pre>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>Vectorize the function you just created using the <code><a href="https://rdrr.io/r/base/Vectorize.html">Vectorize()</a></code> function. Check that it is vectorized by entering <code>c(.5,.75)</code> into the function. You should get 15.85786 20.00000 as an output.</li>
 </ol>
-<div class="sourceCode" id="cb324"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb327"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="cn">T</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/Vectorize.html">Vectorize</a></span><span class="op">(</span><span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb325"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb328"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">.5</span>,<span class="fl">.75</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 15.85786 20.00000</code></pre>
-<div class="sourceCode" id="cb327"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb330"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/integrate.html">integrate</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">-</span><span class="va">x</span><span class="op">/</span><span class="fl">200</span><span class="op">+</span><span class="fl">3</span><span class="op">/</span><span class="fl">20</span>,<span class="fl">10</span>,<span class="fl">20</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 0.75 with absolute error &lt; 8.3e-15</code></pre>
 <ol start="6" style="list-style-type: lower-alpha">
 <li>We are ready. Let’s create a data frame with 10000 simulation for our time and another 10000 for our teammates. Remember to set a seed. At this point it may be hard to remember what we have done. The function we created takes as input a vector of random number from a uniform distribution and then applies the inverse cdf to generate a random sample from our given pdf.</li>
 </ol>
-<div class="sourceCode" id="cb329"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb332"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 20.04401 10.94930 15.29389</code></pre>
-<div class="sourceCode" id="cb331"><pre class="downlit sourceCode r">
+<pre><code>## [1] 20.10583 22.94908 15.91731</code></pre>
+<div class="sourceCode" id="cb334"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1144</span><span class="op">)</span></span>
 <span><span class="va">sim_exercise</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>T1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span>,T2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <ol start="7" style="list-style-type: lower-alpha">
 <li>Do a numerical summary of the data and plot a density plot of your exercise times to give us confidence that we simulated the process correctly.</li>
 </ol>
-<div class="sourceCode" id="cb332"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb335"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/mosaicCore/man/inspect.html">inspect</a></span><span class="op">(</span><span class="va">sim_exercise</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## quantitative variables:  
@@ -274,14 +275,14 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 ##       n missing
 ## 1 10000       0
 ## 2 10000       0</code></pre>
-<div class="sourceCode" id="cb334"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb337"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">gf_dens</span><span class="op">(</span><span class="op">~</span><span class="va">T1</span>,data<span class="op">=</span><span class="va">sim_exercise</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_theme</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="16-Transformations-Solutions_files/figure-html/unnamed-chunk-13-1.png" width="672"></div>
 <ol start="8" style="list-style-type: lower-alpha">
 <li>Create the new variable that is the sum of the two exercise time and then find the probability that the sum is less than 40.</li>
 </ol>
-<div class="sourceCode" id="cb335"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb338"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sim_exercise</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>T_sum<span class="op">=</span><span class="va">T1</span><span class="op">+</span><span class="va">T2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://friendly.github.io/vcdExtra/reference/vcdExtra-deprecated.html">summarise</a></span><span class="op">(</span>prob<span class="op">=</span><span class="fu">mean</span><span class="op">(</span><span class="va">T_sum</span><span class="op">&lt;</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -300,12 +301,12 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#TRANS"><span class="header-section-number">16</span> Transformations</a></li>
-<li><a class="nav-link" href="#objectives-15"><span class="header-section-number">16.1</span> Objectives</a></li>
+<li><a class="nav-link" href="#objectives-16"><span class="header-section-number">16.1</span> Objectives</a></li>
 <li>
 <a class="nav-link" href="#homework-15"><span class="header-section-number">16.2</span> Homework</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#problem-1-15"><span class="header-section-number">16.2.1</span> Problem 1</a></li>
 <li><a class="nav-link" href="#problem-2-15"><span class="header-section-number">16.2.2</span> Problem 2</a></li>
-<li><a class="nav-link" href="#problem-3-12"><span class="header-section-number">16.2.3</span> Problem 3</a></li>
+<li><a class="nav-link" href="#problem-3-11"><span class="header-section-number">16.2.3</span> Problem 3</a></li>
 <li><a class="nav-link" href="#problem-4-7"><span class="header-section-number">16.2.4</span> Problem 4</a></li>
 <li><a class="nav-link" href="#problem-5-5"><span class="header-section-number">16.2.5</span> Problem 5</a></li>
 </ul>
@@ -326,7 +327,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-07-21.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-08-11.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
