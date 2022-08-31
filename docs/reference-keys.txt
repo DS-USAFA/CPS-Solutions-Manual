@@ -46,6 +46,7 @@ objectives-7
 homework-6
 problem-1-6
 problem-2-6
+additional-material
 PROBRULES
 objectives-8
 homework-7
