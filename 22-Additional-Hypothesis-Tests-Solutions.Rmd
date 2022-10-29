@@ -32,7 +32,7 @@ head(golf_balls)
 
 
 ```{r}
-tally(~number,data=golf_balls)
+tally(~number, data = golf_balls)
 ```
 
 
@@ -40,14 +40,16 @@ b. Using the function `chisq.test` conduct a hypothesis test of equally likely d
 
 
 ```{r}
-chisq.test(tally(~number,data=golf_balls),p=c(.25,.25,.25,.25))
+chisq.test(tally(~number, data = golf_balls), 
+           p = c(0.25, 0.25, 0.25, 0.25))
 ```
 
 
 c. Repeat part b), but assume balls with the numbers 1 and 2 occur 30\% of the time and balls with 3 and 4 occur 20\%. 
 
 ```{r}
-chisq.test(tally(~number,data=golf_balls),p=c(.3,.3,.2,.2))
+chisq.test(tally(~number, data = golf_balls),
+           p = c(0.3, 0.3, 0.2, 0.2))
 ```
 
 d. Repeat part c), but use a randomization test this time. You should use $\chi^2$, the chi-squared test statistic, as your test statistic.  
@@ -186,7 +188,7 @@ gf_dist("chisq",df=1,col=1) %>%
    gf_dist("chisq",df=5,col=2) %>%
    gf_dist("chisq",df=10,col=3) %>%
    gf_dist("chisq",df=50,col=4) %>%
-   gf_lims(y=c(0,.25)) %>%
+   gf_lims(y=c(0, 0.25)) %>%
    gf_labs(y="f(x)") %>%
    gf_theme(theme_classic()) 
 ```  
@@ -273,7 +275,7 @@ scale_colour_manual(name="Legend",
 
 The data is in the file `textbooks.csv` under the data folder.
 
-```{r}
+```{r message=F, warning=F}
 textbooks<-read_csv("data/textbooks.csv")
 ```
 

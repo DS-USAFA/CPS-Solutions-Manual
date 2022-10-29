@@ -180,7 +180,7 @@ This is a similar $p$-value.
 
 ### Problem 3
 
-**Bootstrap hypothesis testing**. Repeat the analysis of the MLB data from the lesson but this time generate a bootstrap distribution of the $F$ statistic.
+**Bootstrap for the $F$ statistic**. Repeat the analysis of the MLB data from the lesson but this time generate a bootstrap distribution of the $F$ statistic.
 
 First, read in the data.
 
