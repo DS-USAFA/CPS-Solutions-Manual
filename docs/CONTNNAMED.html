@@ -247,13 +247,13 @@ P(X\geq 45|X\geq 25) = \frac{P(X\geq 45, X\geq 25)}{P(X\geq 25)} = \frac{P(X\geq
 <li>Find <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> where there is a 95% probability that the time until next computer error will be between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. (Note: technically, there are many answers to this question, but find <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that each tail has equal probability.)</li>
 </ol>
 <div class="sourceCode" id="cb265"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">qgamma</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.025</span>,<span class="fl">0.975</span><span class="op">)</span>,<span class="fl">40</span>,<span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">qgamma</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.025</span>, <span class="fl">0.975</span><span class="op">)</span>, <span class="fl">40</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 14.28829 26.65714</code></pre>
-<p>So in the time interval <span class="math inline">\([14,29,26.66]\)</span>.</p>
+<p>So, there is a 95% probability that the time until next computer error will be in the time interval <span class="math inline">\([14.29, 26.66]\)</span>. This uses the central 95% of the gamma distribution.</p>
 <div class="sourceCode" id="cb267"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">qgamma</a></span><span class="op">(</span><span class="fl">.95</span>,<span class="fl">40</span>,<span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">qgamma</a></span><span class="op">(</span><span class="fl">0.95</span>, <span class="fl">40</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 25.46987</code></pre>
-<p>Another answer is between <span class="math inline">\([0,25,47]\)</span>.</p>
+<p>Another answer is between <span class="math inline">\([0, 25.47]\)</span>. This uses the lower 95% of the gamma distribution.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div id="problem-3-8" class="section level3" number="13.2.3">
@@ -395,7 +395,7 @@ f_X(x)=\frac{\Gamma(2)}{\Gamma(1)\Gamma(1)}x^{1-1}(1-x)^{1-1} = 1
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-08-30.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

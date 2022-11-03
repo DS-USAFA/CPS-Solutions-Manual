@@ -33,7 +33,7 @@ b. Simulate having 23 people in the class with each day of the year equally like
 
 ```
 ##     prob
-## 1 0.3697
+## 1 0.3613
 ```
 
 

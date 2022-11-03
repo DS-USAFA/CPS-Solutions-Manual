@@ -156,7 +156,6 @@ ADDTESTS
 objectives-21
 homework-21
 problem-1-21
-add-answer-here
 problem-2-21
 problem-3-15
 problem-4-10
@@ -179,8 +178,6 @@ homework-24
 problem-1-24
 problem-2-23
 problem-3-17
-define-this-problem-further
-problem-4-12
 CS4
 objectives-25
 homework-25
