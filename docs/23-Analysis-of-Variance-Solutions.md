@@ -19,7 +19,7 @@ head(census)
 ```
 
 ```
-## # A tibble: 6 x 8
+## # A tibble: 6 × 8
 ##   census_year state_fips_code total_family_income   age sex    race_general   
 ##         <int> <fct>                         <int> <int> <fct>  <fct>          
 ## 1        2000 Florida                       14550    44 Male   Two major races
@@ -28,7 +28,7 @@ head(census)
 ## 4        2000 Florida                       23000     6 Female White          
 ## 5        2000 Florida                       48000    55 Male   White          
 ## 6        2000 Florida                       74000    43 Female White          
-## # ... with 2 more variables: marital_status <fct>, total_personal_income <int>
+## # ℹ 2 more variables: marital_status <fct>, total_personal_income <int>
 ```
 
 a. State the null and alternative hypotheses in context of the research problem. Note: there are six different marital status types.  
@@ -217,4 +217,6 @@ census %>%
 
 This is *data fishing*. We are inspecting the data before picking groups to compare. We should test for a difference among all the groups, or choose groups to compare before looking at the data.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/ANOVA.html) {-}
 

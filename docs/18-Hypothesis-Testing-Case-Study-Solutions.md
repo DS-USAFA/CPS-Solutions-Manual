@@ -214,3 +214,5 @@ h. Decide if the treatment is effective.
 
 Under the independence model, only 11 out of 1000 times (1.1%) did we get a difference of 0.23 or higher between the proportions of patients that died in the control and treatment groups. Since this is a low probability, we can reject the claim of independence in favor of the alternate model. There is convincing evidence to suggest that the transplant program is effective.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS3.html) {-}

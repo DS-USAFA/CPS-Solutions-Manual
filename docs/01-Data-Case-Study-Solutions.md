@@ -109,7 +109,7 @@ head(migraine_study)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   group     pain_free
 ##   <chr>     <chr>    
 ## 1 treatment yes      
@@ -163,3 +163,5 @@ There were 4.3% of the control group who were pain free.
 
 Complete on your computer or RStudio Cloud. Knit the report by clicking the `Knit` button and choose either the "Knit to HTML" or "Knit to PDF" option from the drop down menu.  
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS1.html) {-}

@@ -33,7 +33,7 @@ b. Simulate having 23 people in the class with each day of the year equally like
 
 ```
 ##     prob
-## 1 0.3613
+## 1 0.3678
 ```
 
 
@@ -214,3 +214,5 @@ choose(23,3)*prod(365:345) / 365^23
 ## [1] 0.007395218
 ```
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS2.html) {-}

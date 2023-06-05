@@ -132,10 +132,6 @@ summary(possum_mod)
 ## Call:
 ## glm(formula = pop == "Vic" ~ ., family = "binomial", data = possum)
 ## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.6430  -0.5514  -0.1182   0.3760   2.8501  
-## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)    
 ## (Intercept)  39.2349    11.5368   3.401 0.000672 ***
@@ -195,10 +191,6 @@ summary(possum_mod_red)
 ## Call:
 ## glm(formula = pop == "Vic" ~ sex + skull_w + total_l + tail_l, 
 ##     family = "binomial", data = possum)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.8102  -0.5683  -0.1222   0.4153   2.7599  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)    
@@ -382,17 +374,17 @@ glimpse(MedGPA)
 ```
 ## Rows: 55
 ## Columns: 11
-## $ Accept     <chr> "D", "A", "A", "A", "A", "A", "A", "D", "A", "A", "A", "A",~
-## $ Acceptance <dbl> 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1,~
-## $ Sex        <chr> "F", "M", "F", "F", "F", "M", "M", "M", "F", "F", "F", "F",~
-## $ BCPM       <dbl> 3.59, 3.75, 3.24, 3.74, 3.53, 3.59, 3.85, 3.26, 3.74, 3.86,~
-## $ GPA        <dbl> 3.62, 3.84, 3.23, 3.69, 3.38, 3.72, 3.89, 3.34, 3.71, 3.89,~
-## $ VR         <dbl> 11, 12, 9, 12, 9, 10, 11, 11, 8, 9, 11, 11, 8, 9, 11, 12, 8~
-## $ PS         <dbl> 9, 13, 10, 11, 11, 9, 12, 11, 10, 9, 9, 8, 10, 9, 8, 8, 8, ~
-## $ WS         <dbl> 9, 8, 5, 7, 4, 7, 6, 8, 6, 6, 8, 4, 7, 4, 6, 8, 8, 9, 5, 8,~
-## $ BS         <dbl> 9, 12, 9, 10, 11, 10, 11, 9, 11, 10, 11, 8, 10, 10, 7, 10, ~
-## $ MCAT       <dbl> 38, 45, 33, 40, 35, 36, 40, 39, 35, 34, 39, 31, 35, 32, 32,~
-## $ Apps       <dbl> 5, 3, 19, 5, 11, 5, 5, 7, 5, 11, 6, 9, 5, 8, 15, 6, 6, 1, 5~
+## $ Accept     <chr> "D", "A", "A", "A", "A", "A", "A", "D", "A", "A", "A", "A",…
+## $ Acceptance <dbl> 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1,…
+## $ Sex        <chr> "F", "M", "F", "F", "F", "M", "M", "M", "F", "F", "F", "F",…
+## $ BCPM       <dbl> 3.59, 3.75, 3.24, 3.74, 3.53, 3.59, 3.85, 3.26, 3.74, 3.86,…
+## $ GPA        <dbl> 3.62, 3.84, 3.23, 3.69, 3.38, 3.72, 3.89, 3.34, 3.71, 3.89,…
+## $ VR         <dbl> 11, 12, 9, 12, 9, 10, 11, 11, 8, 9, 11, 11, 8, 9, 11, 12, 8…
+## $ PS         <dbl> 9, 13, 10, 11, 11, 9, 12, 11, 10, 9, 9, 8, 10, 9, 8, 8, 8, …
+## $ WS         <dbl> 9, 8, 5, 7, 4, 7, 6, 8, 6, 6, 8, 4, 7, 4, 6, 8, 8, 9, 5, 8,…
+## $ BS         <dbl> 9, 12, 9, 10, 11, 10, 11, 9, 11, 10, 11, 8, 10, 10, 7, 10, …
+## $ MCAT       <dbl> 38, 45, 33, 40, 35, 36, 40, 39, 35, 34, 39, 31, 35, 32, 32,…
+## $ Apps       <dbl> 5, 3, 19, 5, 11, 5, 5, 7, 5, 11, 6, 9, 5, 8, 15, 6, 6, 1, 5…
 ```
 
 
@@ -410,10 +402,6 @@ summary(med_mod)
 ## 
 ## Call:
 ## glm(formula = Accept == "D" ~ GPA + Sex, family = binomial, data = MedGPA)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.4623  -0.7194  -0.2978   0.9753   1.8171  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)    
@@ -504,10 +492,6 @@ summary(med_mod2)
 ## glm(formula = Accept == "D" ~ poly(GPA, 2), family = binomial, 
 ##     data = MedGPA)
 ## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.9553  -0.7830  -0.3207   0.8020   1.8363  
-## 
 ## Coefficients:
 ##               Estimate Std. Error z value Pr(>|z|)    
 ## (Intercept)    -0.3301     0.3582  -0.921 0.356822    
@@ -533,7 +517,7 @@ tidy(glm(Accept=="D"~GPA,data=MedGPA,family=binomial))
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic  p.value
 ##   <chr>          <dbl>     <dbl>     <dbl>    <dbl>
 ## 1 (Intercept)    19.2       5.63      3.41 0.000644
@@ -561,7 +545,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT,data=MedGPA,family=binomial)) %>%
 ```
 
 ```
-## # A tibble: 9 x 3
+## # A tibble: 9 × 3
 ##   term        p.value  p.adj
 ##   <chr>         <dbl>  <dbl>
 ## 1 (Intercept) 0.00279 0.0251
@@ -585,7 +569,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT-VR,data=MedGPA,family=binomial)) %>%
 ```
 
 ```
-## # A tibble: 8 x 3
+## # A tibble: 8 × 3
 ##   term        p.value  p.adj
 ##   <chr>         <dbl>  <dbl>
 ## 1 (Intercept) 0.00239 0.0191
@@ -607,7 +591,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT-VR-Apps,data=MedGPA,family=binomial)) %>%
 ```
 
 ```
-## # A tibble: 7 x 3
+## # A tibble: 7 × 3
 ##   term        p.value  p.adj
 ##   <chr>         <dbl>  <dbl>
 ## 1 (Intercept) 0.00147 0.0103
@@ -630,7 +614,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT-VR-Apps-BCPM,
 ```
 
 ```
-## # A tibble: 6 x 3
+## # A tibble: 6 × 3
 ##   term        p.value   p.adj
 ##   <chr>         <dbl>   <dbl>
 ## 1 (Intercept) 0.00123 0.00739
@@ -652,7 +636,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT-VR-Apps-BCPM-WS,
 ```
 
 ```
-## # A tibble: 5 x 3
+## # A tibble: 5 × 3
 ##   term         p.value   p.adj
 ##   <chr>          <dbl>   <dbl>
 ## 1 (Intercept) 0.000584 0.00292
@@ -673,7 +657,7 @@ tidy(glm(Accept=="D"~.-Acceptance-MCAT-VR-Apps-BCPM-WS-PS,
 ```
 
 ```
-## # A tibble: 4 x 3
+## # A tibble: 4 × 3
 ##   term         p.value   p.adj
 ##   <chr>          <dbl>   <dbl>
 ## 1 (Intercept) 0.000574 0.00230
@@ -702,10 +686,6 @@ summary(med_mod2)
 ## Call:
 ## glm(formula = Accept == "D" ~ Sex + GPA + BS, family = binomial, 
 ##     data = MedGPA)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.8388  -0.4707  -0.1347   0.5535   2.6411  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)    
@@ -823,3 +803,6 @@ cdata(~pred,data=results_pred)
 ```
 
 This is close to what we found and does not make the assumption the probability of success is normally distributed. 
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LOGREG.html) {-}

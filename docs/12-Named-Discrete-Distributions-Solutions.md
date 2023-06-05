@@ -331,3 +331,6 @@ sum(dhyper(3:5,7,12,5))
 ## [1] 0.2365841
 ```
 
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/DISCRETENAMED.html) {-}

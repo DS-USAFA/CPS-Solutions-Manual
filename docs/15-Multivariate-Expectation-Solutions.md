@@ -350,3 +350,4 @@ $$
 $$
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/MULTIEXP.html) {-}

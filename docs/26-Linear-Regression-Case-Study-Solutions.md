@@ -50,7 +50,7 @@ hfi %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   `cor(pf_expression_influence, pf_score, use = "complete.obs")`
 ##                                                            <dbl>
 ## 1                                                          0.787
@@ -190,8 +190,12 @@ augment(m2) %>%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##     ave     n
 ##   <dbl> <int>
 ## 1  7.96    42
 ```
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS4.html) {-}
+

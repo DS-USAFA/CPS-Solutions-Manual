@@ -5,7 +5,7 @@ author:
 - Brianna Hitt
 - Kenneth Horton
 - Bradley Warner
-date: "2022-11-03"
+date: "2023-06-05"
 header-includes:
    - \usepackage{multirow}
    - \usepackage{multicol}
@@ -23,7 +23,7 @@ description: "This is a set of solutions used for Math 377, starting in the fall
 # Preface {-}
 
 
-<img src="./figures/CoverSol2.png" width="705" />
+![](./figures/CoverSol2.png)<!-- -->
   
 
 Contained in this volume are the solutions to homework problems in the Computational Probability and Statistics book, master version.  
@@ -54,8 +54,8 @@ This book is licensed under the [Creative Commons Attribution-NonCommercial-Shar
 
 ## File Creation Information 
 
-  * File creation date: 2022-11-03
-  * R version 4.1.3 (2022-03-10)
+  * File creation date: 2023-06-05
+  * R version 4.3.0 (2023-04-21)
 
 
 

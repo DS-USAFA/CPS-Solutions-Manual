@@ -33,7 +33,7 @@ head(golf_balls)
 ```
 
 ```
-## # A tibble: 6 x 1
+## # A tibble: 6 × 1
 ##   number
 ##    <dbl>
 ## 1      3
@@ -244,7 +244,7 @@ mlb_prob3 %>%
 ```
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   position   stat
 ##   <chr>     <dbl>
 ## 1 IF       0.0371
@@ -432,7 +432,7 @@ head(textbooks)
 ```
 
 ```
-## # A tibble: 6 x 7
+## # A tibble: 6 × 7
 ##   dept_abbr course isbn           ucla_new amaz_new more   diff
 ##   <chr>     <chr>  <chr>             <dbl>    <dbl> <chr> <dbl>
 ## 1 Am Ind    C170   978-0803272620     27.7     28.0 Y     -0.28
@@ -533,12 +533,12 @@ t_test(textbooks$ucla_new,textbooks$amaz_new,paired=TRUE)
 ## 
 ## data:  textbooks$ucla_new and textbooks$amaz_new
 ## t = 7.6488, df = 72, p-value = 6.928e-11
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true mean difference is not equal to 0
 ## 95 percent confidence interval:
 ##   9.435636 16.087652
 ## sample estimates:
-## mean of the differences 
-##                12.76164
+## mean difference 
+##        12.76164
 ```
 
 The $p$-value is so small that we don't believe the average price of the books from the UCLA bookstore and Amazon are the same.
@@ -656,3 +656,4 @@ None of the permuted values is at or greater that the observed value.
 
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/ADDTESTS.html) {-}

@@ -28,7 +28,7 @@ mean(sims^2)
 ```
 
 ```
-## [1] 7.916962
+## [1] 8.01571
 ```
 
 So, $g(\E(X))=4$ and $\E(g(X))\approx 7.84$. 
@@ -196,7 +196,7 @@ T(runif(3))
 ```
 
 ```
-## [1] 13.07790 11.80438 20.89069
+## [1] 19.02597 25.66074 11.29625
 ```
 
 
@@ -241,9 +241,11 @@ sim_exercise %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    prob
 ##   <dbl>
 ## 1 0.835
 ```
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/TRANSF.html) {-}

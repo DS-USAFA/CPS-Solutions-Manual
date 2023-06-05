@@ -10,7 +10,7 @@
 <meta name="author" content="Kenneth Horton">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="28.1 Objectives Given a simple linear regression model, conduct inference on the coefficients \(\beta_0\) and \(\beta_1\). Given a simple linear regression model, calculate the predicted response...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 28 Linear Regression Inference | Solutions Manual for ‘Computational Probability and Statistics’">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/CoverSol2.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/figures/CoverSol2.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -150,9 +150,9 @@
 <ol style="list-style-type: lower-alpha">
 <li>Create a scatterplot for cans of beer and blood alcohol level.</li>
 </ol>
-<div class="sourceCode" id="cb666"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb665"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bac</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/bac.csv"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb667"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb666"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bac</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_point</span><span class="op">(</span><span class="va">bac</span><span class="op">~</span><span class="va">beers</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_labs</span><span class="op">(</span>x<span class="op">=</span><span class="st">"Number of cans of beer"</span>,y<span class="op">=</span><span class="st">"BAC"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -167,9 +167,9 @@
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Write the equation of the regression line. Interpret the slope and intercept in context.</li>
 </ol>
-<div class="sourceCode" id="cb668"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb667"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bac_mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">bac</span><span class="op">~</span><span class="va">beers</span>,data<span class="op">=</span><span class="va">bac</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb669"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb668"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">bac_mod</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -201,7 +201,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <li>Build a 95% confidence interval for the slope and interpret it in the context of your hypothesis test from part d. </li>
 </ol>
 <p>We need a lower confidence bound since the alternative is <span class="math inline">\(\beta_1 &gt; 0\)</span>. For a 95% lower confidence bound, we need at 90% confidence interval and then just ignore the upper value.</p>
-<div class="sourceCode" id="cb671"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb670"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/confint.html">confint</a></span><span class="op">(</span><span class="va">bac_mod</span>,level<span class="op">=</span><span class="fl">0.9</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                     5 %        95 %
 ## (Intercept) -0.03495916 0.009557957
@@ -214,7 +214,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <ol start="7" style="list-style-type: lower-alpha">
 <li>Predict the average BAC after two beers and build a 90% confidence interval around that prediction.</li>
 </ol>
-<div class="sourceCode" id="cb673"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb672"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">new_bac</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>beers<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">bac_mod</span>, newdata <span class="op">=</span> <span class="va">new_bac</span>, interval <span class="op">=</span> <span class="st">'confidence'</span>,level<span class="op">=</span><span class="fl">0.9</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##          fit         lwr       upr
@@ -222,7 +222,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <ol start="8" style="list-style-type: lower-alpha">
 <li>Repeat except build a 90% prediction interval and interpret.</li>
 </ol>
-<div class="sourceCode" id="cb675"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb674"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">bac_mod</span>, newdata <span class="op">=</span> <span class="va">new_bac</span>, interval <span class="op">=</span> <span class="st">'prediction'</span>,level<span class="op">=</span><span class="fl">0.9</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##          fit        lwr        upr
 ## 1 0.02322692 -0.0157444 0.06219824</code></pre>
@@ -230,7 +230,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <ol style="list-style-type: lower-roman">
 <li>Plot the data points with a regression line, confidence band, and prediction band.</li>
 </ol>
-<div class="sourceCode" id="cb677"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb676"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bac</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_point</span><span class="op">(</span><span class="va">bac</span><span class="op">~</span><span class="va">beers</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_labs</span><span class="op">(</span>x<span class="op">=</span><span class="st">"Number of cans of beers"</span>,y<span class="op">=</span><span class="st">"BAC"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -238,6 +238,16 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <span>  <span class="fu">gf_lm</span><span class="op">(</span>stat<span class="op">=</span><span class="st">"lm"</span>,interval<span class="op">=</span><span class="st">"prediction"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_theme</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_refine</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">7</span>,<span class="fl">8</span>,<span class="fl">9</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Using the `size` aesthetic with geom_ribbon was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## Warning: Using the `size` aesthetic with geom_line was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <div class="inline-figure"><img src="28-Linear-Regression-Inference-Solutions_files/figure-html/unnamed-chunk-8-1.png" width="672"></div>
 </div>
 <div id="problem-3-18" class="section level3" number="28.2.3">
@@ -246,8 +256,13 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 </h3>
 <p>Suppose I build a regression fitting a response variable to one predictor variable. I build a 95% confidence interval on <span class="math inline">\(\beta_1\)</span> and find that it contains 0, meaning that a slope of 0 is feasible. Does this mean that the response and the predictor are independent?</p>
 <p>No. It merely means that my best guess is that the two variables are <em>linearly uncorrelated</em>. They could be related another way (quadratically, for example), but still result in an estimated slope close to 0.</p>
-
 </div>
+</div>
+<div id="textbook-27" class="section level2 unnumbered">
+<h2>
+<a href="https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRINF.html">Textbook</a><a class="anchor" aria-label="anchor" href="#textbook-27"><i class="fas fa-link"></i></a>
+</h2>
+
 </div>
 </div>
   <div class="chapter-nav">
@@ -265,6 +280,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <li><a class="nav-link" href="#problem-3-18"><span class="header-section-number">28.2.3</span> Problem 3</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#textbook-27">Textbook</a></li>
 </ul>
 
       <div class="book-extra">
@@ -281,7 +297,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-11-03.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2023-06-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -294,7 +310,7 @@ Slope: For each additional can of beer consumed, the model predicts an additiona
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

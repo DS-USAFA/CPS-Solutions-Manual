@@ -49,8 +49,8 @@ glimpse(yawn)
 ```
 ## Rows: 50
 ## Columns: 2
-## $ group   <chr> "treatment", "treatment", "control", "treatment", "treatment",~
-## $ outcome <chr> "no_yawn", "no_yawn", "no_yawn", "no_yawn", "no_yawn", "yawn",~
+## $ group   <chr> "treatment", "treatment", "control", "treatment", "treatment",…
+## $ outcome <chr> "no_yawn", "no_yawn", "no_yawn", "no_yawn", "no_yawn", "yawn",…
 ```
 
 
@@ -109,10 +109,6 @@ gf_dist("hyper",m=16,n=34,k=14) %>%
           subtitle="Red line is P(X=4)",
           y="Probability") %>%
   gf_theme(theme_classic)
-```
-
-```
-## Warning: geom_hline(): Ignoring `mapping` because `yintercept` was provided.
 ```
 
 <img src="20-Hypothesis-Testing-with-Known-Distributions-Solutions_files/figure-html/unnamed-chunk-6-1.png" width="672" />
@@ -299,9 +295,9 @@ glimpse(temperature)
 ```
 ## Rows: 130
 ## Columns: 3
-## $ temperature <dbl> 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4~
-## $ gender      <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1~
-## $ hr          <dbl> 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75~
+## $ temperature <dbl> 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
+## $ gender      <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+## $ hr          <dbl> 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…
 ```
 
 
@@ -337,7 +333,7 @@ temperature %>%
 ```
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   `temperature == 98.6`     n
 ##   <lgl>                 <int>
 ## 1 FALSE                   120
@@ -357,7 +353,7 @@ temperature %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   num_greater
 ##         <int>
 ## 1          39
@@ -402,3 +398,5 @@ This is a clever way to test the claim. Make sure you understand how we solved. 
 
 Notice that by descritizing this problem, we are taking information away. However, the $p$-value is still small.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/HYPTESTDIST.html) {-}

@@ -29,13 +29,13 @@ starbucks <- read_csv("data/starbucks.csv")
 
 ```
 ## Rows: 77 Columns: 7
-## -- Column specification --------------------------------------------------------
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: ","
 ## chr (2): item, type
 ## dbl (5): calories, fat, carb, fiber, protein
 ## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 
@@ -46,13 +46,13 @@ glimpse(starbucks)
 ```
 ## Rows: 77
 ## Columns: 7
-## $ item     <chr> "8-Grain Roll", "Apple Bran Muffin", "Apple Fritter", "Banana~
-## $ calories <dbl> 350, 350, 420, 490, 130, 370, 460, 370, 310, 420, 380, 320, 3~
-## $ fat      <dbl> 8, 9, 20, 19, 6, 14, 22, 14, 18, 25, 17, 12, 17, 21, 5, 18, 1~
-## $ carb     <dbl> 67, 64, 59, 75, 17, 47, 61, 55, 32, 39, 51, 53, 34, 57, 52, 7~
-## $ fiber    <dbl> 5, 7, 0, 4, 0, 5, 2, 0, 0, 0, 2, 3, 2, 2, 3, 3, 2, 3, 0, 2, 0~
-## $ protein  <dbl> 10, 6, 5, 7, 0, 6, 7, 6, 5, 7, 4, 6, 5, 5, 12, 7, 8, 6, 0, 10~
-## $ type     <chr> "bakery", "bakery", "bakery", "bakery", "bakery", "bakery", "~
+## $ item     <chr> "8-Grain Roll", "Apple Bran Muffin", "Apple Fritter", "Banana…
+## $ calories <dbl> 350, 350, 420, 490, 130, 370, 460, 370, 310, 420, 380, 320, 3…
+## $ fat      <dbl> 8, 9, 20, 19, 6, 14, 22, 14, 18, 25, 17, 12, 17, 21, 5, 18, 1…
+## $ carb     <dbl> 67, 64, 59, 75, 17, 47, 61, 55, 32, 39, 51, 53, 34, 57, 52, 7…
+## $ fiber    <dbl> 5, 7, 0, 4, 0, 5, 2, 0, 0, 0, 2, 3, 2, 2, 3, 3, 2, 3, 0, 2, 0…
+## $ protein  <dbl> 10, 6, 5, 7, 0, 6, 7, 6, 5, 7, 4, 6, 5, 5, 12, 7, 8, 6, 0, 10…
+## $ type     <chr> "bakery", "bakery", "bakery", "bakery", "bakery", "bakery", "…
 ```
 
 
@@ -91,6 +91,14 @@ starbucks %>%
   gf_labs(x="Carbohydrate Content (g)",y="Calories") %>%
   gf_lm() %>%
   gf_theme(theme_classic())
+```
+
+```
+## Warning: Using the `size` aesthetic with geom_line was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
 ```
 
 <img src="27-Linear-Regression-Basics-Solutions_files/figure-html/unnamed-chunk-4-1.png" width="672" />
@@ -209,4 +217,5 @@ l. What is the estimate of the standard deviation of the residuals? How could yo
 The estimate is 78.26. If the normal assumption is accurate, we would expect a majority of observations to be within $\pm$ 78.26 calories of the line.  
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRBASICS.html) {-}
 

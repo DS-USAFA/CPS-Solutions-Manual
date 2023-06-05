@@ -156,6 +156,22 @@ bac %>%
   gf_refine(scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9)))
 ```
 
+```
+## Warning: Using the `size` aesthetic with geom_ribbon was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## Warning: Using the `size` aesthetic with geom_line was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
 <img src="28-Linear-Regression-Inference-Solutions_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 ### Problem 3
@@ -163,3 +179,7 @@ bac %>%
 Suppose I build a regression fitting a response variable to one predictor variable. I build a 95% confidence interval on $\beta_1$ and find that it contains 0, meaning that a slope of 0 is feasible. Does this mean that the response and the predictor are independent? 
 
 No. It merely means that my best guess is that the two variables are *linearly uncorrelated*. They could be related another way (quadratically, for example), but still result in an estimated slope close to 0. 
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRINF.html) {-}
+

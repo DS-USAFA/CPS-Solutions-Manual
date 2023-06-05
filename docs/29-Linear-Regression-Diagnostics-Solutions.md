@@ -116,7 +116,7 @@ bac
 ```
 
 ```
-## # A tibble: 16 x 3
+## # A tibble: 16 × 3
 ##    student beers   bac
 ##      <int> <int> <dbl>
 ##  1       1     5 0.1  
@@ -176,4 +176,7 @@ Identify the outliers in the scatterplots shown below and determine what type of
 (d) The outlier is in the upper-left corner. Since it is horizontally far from the center of the data, it is an high leverage point. Additionally, since the fit of the regression line is greatly influenced by this point, it is a influential point.    
 (e) The outlier is located in the lower-left corner. It is horizontally far from the rest of the data, so it is a high-leverage point. The regression line also would fall relatively far from this point if the fit excluded this point, meaning the outlier is influential.  
 (f) The outlier is in the upper-middle of the plot. Since it is near the horizontal center of the data, it is not a high-leverage point. This means it also will have little or no influence on the slope of the regression line.  
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRDIAG.html) {-}
 

@@ -313,3 +313,6 @@ Now we can determine the probability of a fair coin given 3 heads.
 A much different answer. That is because prior to getting the data we believed the fair coin would be selected with a 75% probability. The data indicates that we need to update and lower this probability. We only flipped 3 times but the evidence is so in favor of the biased coin, that our probability dropped substantially. This is why Bayes is such a powerful tool.
 
 Think about what we just did with this problem. We started with a subjective believe that either coin would be selected with equal probability. This is called the prior probability. We then collected data on three flips of the coin. We used this empirical data to update our belief into a posterior probability. This is the basis for Bayesian statistical analysis. Bayesian statistics is an entire discipline unto itself.
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CONDPROB.html) {-}

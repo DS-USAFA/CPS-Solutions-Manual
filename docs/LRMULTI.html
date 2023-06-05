@@ -10,7 +10,7 @@
 <meta name="author" content="Kenneth Horton">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="31.1 Objectives Create and interpret a model with multiple predictors and check assumptions. Generate and interpret confidence intervals for estimates. Explain adjusted \(R^2\) and...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 31 Multiple Linear Regression | Solutions Manual for ‘Computational Probability and Statistics’">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/CoverSol2.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/figures/CoverSol2.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -144,7 +144,7 @@
 <ol style="list-style-type: lower-alpha">
 <li>Build and interpret the coefficients of a model fitting <code>mpg</code> against displacement (<code>disp</code>), horsepower (<code>hp</code>), rear axle ratio (<code>drat</code>), and weight in 1000 lbs (<code>wt</code>).</li>
 </ol>
-<div class="sourceCode" id="cb730"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb731"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cars_mod</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">~</span><span class="va">disp</span><span class="op">+</span><span class="va">hp</span><span class="op">+</span><span class="va">drat</span><span class="op">+</span><span class="va">wt</span>,data<span class="op">=</span><span class="va">mtcars</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">cars_mod</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
@@ -175,21 +175,21 @@
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Given your model, what is the expected, average, mpg for a vehicle with a displacement of 170, a horsepower of 100, a <code>drat</code> of 3.80 and a wt of 2,900 lbs. Construct a 95% confidence interval and prediction interval for that expected mpg.</li>
 </ol>
-<div class="sourceCode" id="cb732"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb733"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">cars_mod</span>,newdata<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>disp<span class="op">=</span><span class="fl">170</span>,hp<span class="op">=</span><span class="fl">100</span>,drat<span class="op">=</span><span class="fl">3.8</span>,wt<span class="op">=</span><span class="fl">2.9</span><span class="op">)</span>,interval<span class="op">=</span><span class="st">"confidence"</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##        fit      lwr      upr
 ## 1 22.94652 21.76569 24.12735</code></pre>
-<div class="sourceCode" id="cb734"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb735"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">cars_mod</span>,newdata<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>disp<span class="op">=</span><span class="fl">170</span>,hp<span class="op">=</span><span class="fl">100</span>,drat<span class="op">=</span><span class="fl">3.8</span>,wt<span class="op">=</span><span class="fl">2.9</span><span class="op">)</span>,interval<span class="op">=</span><span class="st">"prediction"</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##        fit      lwr      upr
 ## 1 22.94652 17.47811 28.41494</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Repeat part (b) with a bootstrap for the confidence interval.</li>
 </ol>
-<div class="sourceCode" id="cb736"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb737"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">732</span><span class="op">)</span></span>
 <span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">do</span><span class="op">(</span><span class="fl">1000</span><span class="op">)</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">~</span><span class="va">disp</span><span class="op">+</span><span class="va">hp</span><span class="op">+</span><span class="va">drat</span><span class="op">+</span><span class="va">wt</span>,data<span class="op">=</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/resample.html">resample</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb737"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb738"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##   Intercept          disp          hp      drat        wt    sigma r.squared
 ## 1  20.28185 -0.0017783926 -0.02620557 2.8897199 -2.016023 2.300320 0.8210210
@@ -205,7 +205,7 @@
 ## 4 38.96659     4    27    1      4
 ## 5 42.99429     4    27    1      5
 ## 6 34.84241     4    27    1      6</code></pre>
-<div class="sourceCode" id="cb739"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb740"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">results</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>pred<span class="op">=</span><span class="va">Intercept</span><span class="op">+</span><span class="va">disp</span><span class="op">*</span><span class="fl">170</span><span class="op">+</span><span class="va">hp</span><span class="op">*</span><span class="fl">100</span><span class="op">+</span><span class="va">drat</span><span class="op">*</span><span class="fl">3.8</span><span class="op">+</span><span class="va">wt</span><span class="op">*</span><span class="fl">2.9</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/pqrdata.html">cdata</a></span><span class="op">(</span><span class="op">~</span><span class="va">pred</span>,data<span class="op">=</span><span class="va">.</span><span class="op">)</span></span></code></pre></div>
@@ -218,7 +218,7 @@
 </h3>
 <p>Is that the best model for predicting mpg? Try a variety of different models. You could explore higher order terms or even interactions. One place to start is by using the <code><a href="https://rdrr.io/r/graphics/pairs.html">pairs()</a></code> function on <code>mtcars</code> to plot a large pairwise scatterplot. How high could you get adjusted <span class="math inline">\(R\)</span>-squared? Keep in mind that is only one measure of fit.</p>
 <p>Answers will vary, but we tried this and got 0.8694.</p>
-<div class="sourceCode" id="cb741"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb742"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">~</span><span class="va">disp</span><span class="op">+</span><span class="fu"><a href="https://rdrr.io/r/base/AsIs.html">I</a></span><span class="op">(</span><span class="va">disp</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">+</span><span class="va">hp</span><span class="op">+</span><span class="fu"><a href="https://rdrr.io/r/base/AsIs.html">I</a></span><span class="op">(</span><span class="va">hp</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">+</span><span class="va">wt</span>,data<span class="op">=</span><span class="va">mtcars</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -242,8 +242,13 @@
 ## Residual standard error: 2.178 on 26 degrees of freedom
 ## Multiple R-squared:  0.8904, Adjusted R-squared:  0.8694 
 ## F-statistic: 42.26 on 5 and 26 DF,  p-value: 1.129e-11</code></pre>
-
 </div>
+</div>
+<div id="textbook-30" class="section level2 unnumbered">
+<h2>
+<a href="https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRMULTI.html">Textbook</a><a class="anchor" aria-label="anchor" href="#textbook-30"><i class="fas fa-link"></i></a>
+</h2>
+
 </div>
 </div>
   <div class="chapter-nav">
@@ -260,6 +265,7 @@
 <li><a class="nav-link" href="#problem-2-27"><span class="header-section-number">31.2.2</span> Problem 2</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#textbook-30">Textbook</a></li>
 </ul>
 
       <div class="book-extra">
@@ -276,7 +282,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-11-03.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2023-06-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -289,7 +295,7 @@
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

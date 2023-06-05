@@ -228,10 +228,6 @@ results %>%
   gf_labs(x="Difference in means")
 ```
 
-```
-## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.
-```
-
 <img src="25-Bootstrap-Solutions_files/figure-html/unnamed-chunk-18-1.png" width="672" />
 
 
@@ -341,4 +337,5 @@ cdata(~f_boot,data=results)
 We are 95\% confident that the $F$ statistic is in the interval $(0.35,8.72)$ which includes 1 so we fail to reject the null hypothesis of equal means. Remember under the null hypothesis the ratio of the variance between means to the pooled variance within categories should be 1. 
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/BOOT.html) {-}
 

@@ -70,3 +70,5 @@ c. Can we conclude that having a bachelor's degree increases one's income?
 This is an observational study so we cannot make a causal statement based on the results. However, we can say that having a higher percentage of population with bachelor's degree is associated with a higher per capita income.
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/ODCP.html) {-}
+

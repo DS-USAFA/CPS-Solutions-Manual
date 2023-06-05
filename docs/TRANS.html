@@ -10,7 +10,7 @@
 <meta name="author" content="Kenneth Horton">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="16.1 Objectives Given a discrete random variable, determine the distribution of a transformation of that random variable. Given a continuous random variable, use the cdf method to determine the...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 16 Transformations | Solutions Manual for ‘Computational Probability and Statistics’">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/CoverSol2.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/figures/CoverSol2.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -144,7 +144,7 @@
 <div class="sourceCode" id="cb315"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sims</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/Exponential.html">rexp</a></span><span class="op">(</span><span class="fl">10000</span>,<span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="fu">mean</span><span class="op">(</span><span class="va">sims</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 7.916962</code></pre>
+<pre><code>## [1] 8.01571</code></pre>
 <p>So, <span class="math inline">\(g(\mbox{E}(X))=4\)</span> and <span class="math inline">\(\mbox{E}(g(X))\approx 7.84\)</span>.</p>
 </div>
 <div id="problem-2-15" class="section level3" number="16.2.2">
@@ -258,7 +258,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 </ol>
 <div class="sourceCode" id="cb332"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 13.07790 11.80438 20.89069</code></pre>
+<pre><code>## [1] 19.02597 25.66074 11.29625</code></pre>
 <div class="sourceCode" id="cb334"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1144</span><span class="op">)</span></span>
 <span><span class="va">sim_exercise</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>T1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span>,T2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">T</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -285,13 +285,18 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <div class="sourceCode" id="cb338"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sim_exercise</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>T_sum<span class="op">=</span><span class="va">T1</span><span class="op">+</span><span class="va">T2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="http://friendly.github.io/vcdExtra/reference/vcdExtra-deprecated.html">summarise</a></span><span class="op">(</span>prob<span class="op">=</span><span class="fu">mean</span><span class="op">(</span><span class="va">T_sum</span><span class="op">&lt;</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## # A tibble: 1 x 1
+<span>  <span class="fu">summarise</span><span class="op">(</span>prob<span class="op">=</span><span class="fu">mean</span><span class="op">(</span><span class="va">T_sum</span><span class="op">&lt;</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## # A tibble: 1 × 1
 ##    prob
 ##   &lt;dbl&gt;
 ## 1 0.835</code></pre>
-
 </div>
+</div>
+<div id="textbook-15" class="section level2 unnumbered">
+<h2>
+<a href="https://ds-usafa.github.io/Computational-Probability-and-Statistics/TRANSF.html">Textbook</a><a class="anchor" aria-label="anchor" href="#textbook-15"><i class="fas fa-link"></i></a>
+</h2>
+
 </div>
 </div>
   <div class="chapter-nav">
@@ -311,6 +316,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <li><a class="nav-link" href="#problem-5-5"><span class="header-section-number">16.2.5</span> Problem 5</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#textbook-15">Textbook</a></li>
 </ul>
 
       <div class="book-extra">
@@ -327,7 +333,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2022-11-03.</p>
+    <p>"<strong>Solutions Manual for ‘Computational Probability and Statistics’</strong>" was written by Matthew Davis, Brianna Hitt, Kenneth Horton, Bradley Warner. It was last built on 2023-06-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -340,7 +346,7 @@ Figure 16.1: pdf of <span class="math inline">\(T\)</span>
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

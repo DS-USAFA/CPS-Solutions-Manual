@@ -70,7 +70,7 @@ str(loans200)
 ```
 
 ```
-## tibble [199 x 3] (S3: tbl_df/tbl/data.frame)
+## tibble [199 × 3] (S3: tbl_df/tbl/data.frame)
 ##  $ interest_rate: num [1:199] 13.59 9.92 17.47 10.9 7.34 ...
 ##  $ loan_amount  : num [1:199] 13000 10000 10000 8400 4800 10000 6000 6300 10000 32000 ...
 ##  $ term         : Factor w/ 2 levels "36","60": 1 1 1 1 1 1 1 1 1 1 ...
@@ -210,7 +210,7 @@ head(results2)
 ```
 ## Response: interest_rate (numeric)
 ## Explanatory: loan_amount (numeric)
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   replicate        stat
 ##       <int>       <dbl>
 ## 1         1 -0.0000114 
@@ -230,7 +230,7 @@ get_confidence_interval(results2)
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##     lower_ci  upper_ci
 ##        <dbl>     <dbl>
 ## 1 -0.0000361 0.0000947
@@ -392,3 +392,7 @@ plot(int_rate_mod2)
 <img src="30-Simulation-Based-Linear-Regression-Solutions_files/figure-html/unnamed-chunk-24-1.png" width="672" /><img src="30-Simulation-Based-Linear-Regression-Solutions_files/figure-html/unnamed-chunk-24-2.png" width="672" /><img src="30-Simulation-Based-Linear-Regression-Solutions_files/figure-html/unnamed-chunk-24-3.png" width="672" /><img src="30-Simulation-Based-Linear-Regression-Solutions_files/figure-html/unnamed-chunk-24-4.png" width="672" />
 
 Because of the discrete nature of the predictor, only the first two plots are of interest. The assumption of constant variable does seem reasonable but the assumption of normally distributed errors is not. We have a positive skewness.
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRSIM.html) {-}
+

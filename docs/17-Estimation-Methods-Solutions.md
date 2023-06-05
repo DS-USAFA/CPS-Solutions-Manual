@@ -143,7 +143,7 @@ head(my_data)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   Sample Percent
 ##    <dbl>   <dbl>
 ## 1     10   0.282
@@ -271,7 +271,7 @@ $$
 Figure \@ref(fig:fig1) is a plot of this likelihood function and you can see that the maximum occurs at the maximum observed data point. 
 
 <div class="figure" style="text-align: center">
-<img src="figures/L_theta.png" alt="A graph of the likelihood function" width="576" />
+<img src="figures/L_theta.png" alt="A graph of the likelihood function"  />
 <p class="caption">(\#fig:fig1)A graph of the likelihood function</p>
 </div>
 
@@ -281,3 +281,5 @@ You can picture $L$ as a decreasing function of $\theta$, but remembering that $
 
 This estimate is more intuitive than the method of moments estimate ($2\bar{x}$). The method of moments estimate is sometimes not feasible. Meanwhile, the MLE ($\max x_i$) is always feasible. 
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/EST.html) {-}

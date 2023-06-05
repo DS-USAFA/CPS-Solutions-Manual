@@ -158,3 +158,5 @@ summary(lm(mpg~disp+I(disp^2)+hp+I(hp^2)+wt,data=mtcars))
 ```
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRMULTI.html) {-}
+

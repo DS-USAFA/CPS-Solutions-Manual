@@ -27,7 +27,7 @@ ads
 ```
 
 ```
-## # A tibble: 10 x 2
+## # A tibble: 10 × 2
 ##    basic premium
 ##    <dbl>   <dbl>
 ##  1  6.95    3.38
@@ -50,7 +50,7 @@ ads
 ```
 
 ```
-## # A tibble: 20 x 2
+## # A tibble: 20 × 2
 ##    channel length
 ##    <chr>    <dbl>
 ##  1 basic     6.95
@@ -181,8 +181,8 @@ glimpse(yawn)
 ```
 ## Rows: 50
 ## Columns: 2
-## $ group   <chr> "treatment", "treatment", "control", "treatment", "treatment",~
-## $ outcome <chr> "no_yawn", "no_yawn", "no_yawn", "no_yawn", "no_yawn", "yawn",~
+## $ group   <chr> "treatment", "treatment", "control", "treatment", "treatment",…
+## $ outcome <chr> "no_yawn", "no_yawn", "no_yawn", "no_yawn", "no_yawn", "yawn",…
 ```
 
 
@@ -296,3 +296,5 @@ g. How did you select your level of significance? Explain in 1-3 sentences.
 
 Since there was no clear impact on one type of error being worse than the other, I stayed with the default of 0.05.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/HYPTESTSIM.html) {-}

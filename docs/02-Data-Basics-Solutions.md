@@ -67,3 +67,6 @@ ames %>%
 <img src="02-Data-Basics-Solutions_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 There appears to be a positive association between the above ground living area square feet and sale price of a residential property in Ames, IA.  
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/DB.html) {-}
