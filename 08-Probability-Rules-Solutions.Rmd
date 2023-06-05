@@ -290,3 +290,4 @@ mean(~full_house,data=results)
 ```
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/PROBRULES.html) {-}

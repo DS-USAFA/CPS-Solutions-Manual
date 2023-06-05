@@ -287,3 +287,6 @@ $$
 =\E(X^2)-2\mu_X\E(X)+\mu_X^2=\E(X^2)-2\mu_X^2+\mu_X^2 = \E(X^2)-\mu_X^2
 $$
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/RANDVAR.html) {-}
+

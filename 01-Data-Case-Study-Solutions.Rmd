@@ -116,3 +116,5 @@ There were 4.3% of the control group who were pain free.
 
 Complete on your computer or RStudio Cloud. Knit the report by clicking the `Knit` button and choose either the "Knit to HTML" or "Knit to PDF" option from the drop down menu.  
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS1.html) {-}

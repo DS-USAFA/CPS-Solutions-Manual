@@ -228,3 +228,5 @@ You can picture $L$ as a decreasing function of $\theta$, but remembering that $
 
 This estimate is more intuitive than the method of moments estimate ($2\bar{x}$). The method of moments estimate is sometimes not feasible. Meanwhile, the MLE ($\max x_i$) is always feasible. 
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/EST.html) {-}

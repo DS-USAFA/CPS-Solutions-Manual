@@ -187,3 +187,5 @@ g. How did you select your level of significance? Explain in 1-3 sentences.
 
 Since there was no clear impact on one type of error being worse than the other, I stayed with the default of 0.05.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/HYPTESTSIM.html) {-}

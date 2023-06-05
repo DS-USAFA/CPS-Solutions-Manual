@@ -193,3 +193,5 @@ e. Are life span and length of gestation independent? Explain your reasoning.
 
 No, there is an association and it appears to be linear. If the plot looked like a "shotgun" blast, we would consider the variables to be independent. However, remember there may be confounding variables that could impact the association between these variables.  
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/NUMDATA.html) {-}

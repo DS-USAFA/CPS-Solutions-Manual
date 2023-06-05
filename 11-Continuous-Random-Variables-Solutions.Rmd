@@ -187,3 +187,5 @@ $$
 
 So, we have shown that $F_X(a)\leq F_X(b)$. Thus, $F_X(x)$ is a non-decreasing function. 
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CONRANDVAR.html) {-}

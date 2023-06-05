@@ -114,3 +114,7 @@ bac %>%
 Suppose I build a regression fitting a response variable to one predictor variable. I build a 95% confidence interval on $\beta_1$ and find that it contains 0, meaning that a slope of 0 is feasible. Does this mean that the response and the predictor are independent? 
 
 No. It merely means that my best guess is that the two variables are *linearly uncorrelated*. They could be related another way (quadratically, for example), but still result in an estimated slope close to 0. 
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRINF.html) {-}
+

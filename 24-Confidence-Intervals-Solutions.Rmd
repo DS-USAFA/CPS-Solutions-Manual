@@ -331,3 +331,5 @@ binom.test(x=15,n=125,p=.08,alternative = "greater",ci.method = "Wald")
 
 This interval is not very good. The coverage is poor especially for small sample sizes. To learn more, read *Approximate is better then exact for interval estimation of binomial proportions.* A. Agresti and B. A. Coull, American Statistician 52, 1998, 119-126.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CI.html) {-}

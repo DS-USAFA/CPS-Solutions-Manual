@@ -123,4 +123,5 @@ l. What is the estimate of the standard deviation of the residuals? How could yo
 The estimate is 78.26. If the normal assumption is accurate, we would expect a majority of observations to be within $\pm$ 78.26 calories of the line.  
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRBASICS.html) {-}
 

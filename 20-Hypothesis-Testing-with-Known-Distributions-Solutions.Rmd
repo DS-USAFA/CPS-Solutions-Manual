@@ -260,3 +260,5 @@ This is a clever way to test the claim. Make sure you understand how we solved. 
 
 Notice that by descritizing this problem, we are taking information away. However, the $p$-value is still small.
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/HYPTESTDIST.html) {-}

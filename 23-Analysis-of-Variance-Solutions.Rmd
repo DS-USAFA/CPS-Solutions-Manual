@@ -142,3 +142,5 @@ census %>%
 This is *data fishing*. We are inspecting the data before picking groups to compare. We should test for a difference among all the groups, or choose groups to compare before looking at the data.
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/ANOVA.html) {-}
+

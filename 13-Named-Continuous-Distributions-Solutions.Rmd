@@ -269,3 +269,5 @@ $$ =\int_{a}^{b}\frac{x}{b-a}dx =$$
 $$ =\frac{1}{b-a}\int_{a}^{b}xdx = \frac{1}{b-a}\cdot\frac{x^2}{2}\bigg|_{a}^{b}=$$
 
 $$ =\frac{1}{b-a}\cdot\frac{b^2-a^2}{2}= \frac{1}{b-a}\cdot\frac{(b-a)(b+a)}{2}=\frac{(b+a)}{2}$$
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CONTNNAMED.html) {-}

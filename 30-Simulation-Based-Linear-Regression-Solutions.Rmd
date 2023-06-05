@@ -213,3 +213,7 @@ plot(int_rate_mod2)
 ```
 
 Because of the discrete nature of the predictor, only the first two plots are of interest. The assumption of constant variable does seem reasonable but the assumption of normally distributed errors is not. We have a positive skewness.
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRSIM.html) {-}
+

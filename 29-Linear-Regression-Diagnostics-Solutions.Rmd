@@ -123,3 +123,6 @@ include_graphics("figures/outOut2.png")
 (e) The outlier is located in the lower-left corner. It is horizontally far from the rest of the data, so it is a high-leverage point. The regression line also would fall relatively far from this point if the fit excluded this point, meaning the outlier is influential.  
 (f) The outlier is in the upper-middle of the plot. Since it is near the horizontal center of the data, it is not a high-leverage point. This means it also will have little or no influence on the slope of the regression line.  
 
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/LRDIAG.html) {-}
+

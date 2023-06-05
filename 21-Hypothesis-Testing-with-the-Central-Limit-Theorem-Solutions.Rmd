@@ -272,3 +272,4 @@ g. Draw a conclusion.
 Because the $p$-value is larger than 0.05, we do not reject the null hypothesis, and we do not find convincing evidence to support the campaign manager's claim.
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/HYPTESTCLT.html) {-}

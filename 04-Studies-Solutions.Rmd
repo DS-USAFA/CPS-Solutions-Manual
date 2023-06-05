@@ -119,3 +119,4 @@ f. Suppose you are given the task of determining if this proposed study should g
 It would be very difficult, if not impossible, to successfully conduct this study since randomly sampled people cannot be required to participate in a clinical trial.  
 
 
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/STUDY.html) {-}

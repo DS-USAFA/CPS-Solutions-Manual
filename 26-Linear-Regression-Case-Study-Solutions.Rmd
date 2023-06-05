@@ -126,3 +126,7 @@ augment(m2) %>%
    filter(pf_expression_influence==6) %>%
     summarize(ave=mean(pf_score),n=n())
 ```
+
+
+## [Textbook](https://ds-usafa.github.io/Computational-Probability-and-Statistics/CS4.html) {-}
+
