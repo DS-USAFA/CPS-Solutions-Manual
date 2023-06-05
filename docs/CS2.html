@@ -148,7 +148,7 @@ Complete a similar analysis for case where exactly 2 people in a room of 23 peop
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>match <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">length</span> <span class="op">==</span> <span class="fl">22</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">summarise</span><span class="op">(</span>prob <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">match</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##     prob
-## 1 0.3678</code></pre>
+## 1 0.3544</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Plot the frequency of occurrences as a bar chart.</li>
 </ol>

@@ -6,7 +6,7 @@
 
 1) Use `R` for basic analysis and visualization.  
 
-2) Compile a report using `knitr`. 
+2) Compile a pdf file report from a RMD file in R. 
 
 
 
